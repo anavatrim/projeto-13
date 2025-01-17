@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="shortcut icon" href="src/imagem/image.png" type="image/x-icon">
-
+<script src="script.js"></script>
 </head>
 <style>
 
@@ -38,33 +38,35 @@ max-height: 90%;
 }
 
 .Th1 {
-font-family: 'Roboto', sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 font-weight: 700;
 font-size: 4rem;
 margin-top: 20px; 
 color: #000000;
 }
 
-.fs-4 {
-font-family: 'Roboto', sans-serif;
+.Th2 {
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 400;
+font-size: 1.8rem;
+color: #000000; 
+margin-bottom: 20px;
+}
+.Th3 {
+font-family:Arial, Helvetica, sans-serif;
 font-weight: 400;
 font-size: 1.8rem;
 color: #000000; 
 margin-bottom: 20px;
 }
 
-.fst-italic {
-font-style: italic;
-font-size: 1.5rem;
-color: #000000;
-}
 
 .imagemI {
 border-radius: 50%;
 box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 transition: transform 0.3s ease-in-out;
-margin-top: 20px; /* Espaçamento superior */
-width: 250px; /* Tamanho fixo para a imagem */
+margin-top: 20px; 
+width: 250px; 
 height: 250px;
 }
 
@@ -76,6 +78,57 @@ transform: scale(1.1);
 margin-top: 90px;
 font-size: 40px;
 }
+.card-title{
+font-family: Arial, Helvetica, sans-serif;
+}
+.card-text{
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-container {
+width: 100%;
+height: 200px;
+perspective: 1000px; 
+cursor: pointer;
+}
+
+.card-inner {
+width: 100%;
+height: 100%;
+position: relative;
+transform-style: preserve-3d;
+transition: transform 0.6s;
+}
+
+.card-container.flipped .card-inner {
+transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+width:  100%;
+height: 80%;
+position: absolute;
+backface-visibility: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 15px; 
+box-shadow: 0  4px 40px rgba(0, 0, 0, 0.1);
+padding: 1rem;
+color: rgb(0, 0, 0);
+font-size: 1rem;
+text-align: center;
+}
+
+.card-front {
+background-color: #90cbd8; 
+}
+
+.card-back {
+background-color: #effcfd; 
+transform: rotateY(180deg);
+}
+
 
 .circle {
 position: absolute;
@@ -149,12 +202,11 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 h2, h3 {
 font-size: 2rem;
-font-weight: bold;
-color: #0059b9;
+font-family: Arial, Helvetica, sans-serif;
+color: #000000;
 margin-bottom: 1rem;
 text-transform: uppercase;
 text-align: center;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #equipe .team-card {
@@ -288,13 +340,13 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .item h3 {
-font-family: 'Roboto', sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 font-weight: 700;
 color: #007bff; 
 }
 
 .item p {
-font-family: 'Roboto', sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 font-weight: 400;
 color: #6c757d; 
 }
@@ -313,7 +365,7 @@ font-size: 1.1rem;
 font-size: 1.25rem;
 }
 
-.card-text {
+.card-text  {
 font-size: 0.9rem;
 }
 
@@ -341,33 +393,61 @@ text-align: center;
 }
 
 .text-overlay {
-max-width: 70%;
-padding: 1%;
+max-width: 80%;
+position: absolute;
+top: 0; 
+left: 50%;
+transform: translateX(-50%);
+width: 100%; 
+padding: 0;
+margin-top: 50px;
 }
 
+
 .Th1 {
-font-size: 2rem;
+font-size: 20px;
+}
+.Th2 {
+font-size: 15px;
+}
+
+.Th3 {
+font-size: 15px;
+color: #000000;
 }
 
 .fs-4 {
-font-size: 1rem;
+font-size: 1px;
 }
 
 .imagemI {
-width: 150px;
-height: 150px;
+width: 140px;
+height: 130px;
 }
 
 .card {
 margin-bottom: 20px;
 }
 
+.card-inner {
+width: 400px; 
+height: 200px; 
+margin: auto; 
+}
+
 #servicos h3 {
 font-size: 1.8rem;
 padding: 100px;
-}}
+}
+}
+
+footer {
+width: 100vw;
+position: relative; 
+}
 
 </style>
+
 <body class="body">
 
 <nav class="navbar navbar-expand-lg bg-primary fixed-top">
@@ -407,92 +487,160 @@ padding: 100px;
 </nav>
 
 
-<section id="#" class="py-5">
+<section>
 
-<div class="container-fluid mb-0" id="home">
+<div class="container-fluid mb-5" id="home">
 <img src="src/imagem/tela.png" alt="frente" class="w-50">
 <div class="text-overlay container-fluid">
 <h1 class="Th1 display-4">CUIDAR CLÍNICA INTEGRADA</h1>
-<h3 class="fs-4">
+<h3 class="Th2 display-4">
 PSICOLOGIA, FONOAUDIOLOGIA, NEUROPSICOLOGIA, 
 PSICOPEDAGOGIA, PSICOMOTRICIDADE, PISCOGERONTOLOGIA E TERAPIAS DO AUTISMO.
 </h3>
 <img class="imagemI" src="src/imagem/IMAGE.1.png">
-<p class="fst-italic fs-3">"Centro de Neurodesenvolvimento Infantil"</p>
+<p class="Th3 display-4">"Centro de Neurodesenvolvimento Infantil"</p>
 </div>
 </div>
 
 </section>
 
 <section id="servicos" class="py-5">
-<h3 class="text-center pt-5 py-5 "><strong>Nossos Serviços</strong></h3>
+<h3 class="text-center pt-5 py-5">Nossos Serviços</h3>
 <div class="row">
 
-<div class="col-md-4 mt-5">
-<div class="card h-100 border-primary mb-3">
-<div class="card-body text-center mt-3">
-<h5 class="card-title">Neuropsicologia</h5>
-<p class="card-text">avaliamos e tratamos problemas cognitivos, emocionais e comportamentais decorrentes 
-de lesões ou disfunções cerebrais. Utilizamos testes neuropsicológicos para identificar dificuldades específicas e 
-desenvolver planos de intervenção personalizados para melhorar a qualidade de vida dos pacientes.</p>
+<div class="col-md-4">
+<div class="card-container" onclick="flipCard(this)">
+<div class="card-inner">
+
+<div class="card-front">
+<h5 class="card-title fs-1">Neuropsicologia</h5>
+</div>
+
+<div class="card-back">
+<p class="card-text">Avaliamos e tratamos problemas cognitivos, emocionais e comportamentais decorrentesde lesões ou disfunções cerebrais. Utilizamos testes neuropsicológicos
+para identificar dificuldades específicas e desenvolver planos de intervenção personalizados para melhorar a qualidade de vida dos pacientes.</p>
+</div>
+
+<div class="card-front">
+<h5 class="card-title fs-1">Neuropsicologia</h5>
+</div>
+
+<div class="card-back">
+<p class="card-text">Avaliamos e tratamos problemas cognitivos, emocionais e comportamentais decorrentesde lesões ou disfunções cerebrais. Utilizamos testes neuropsicológicos
+para identificar dificuldades específicas e desenvolver planos de intervenção personalizados para melhorar a qualidade de vida dos pacientes.</p>
+</div>
 </div>
 </div>
 </div>
 
-<div class="col-md-4 mt-5">
-<div class="card h-100 border-primary mb-3">
-<div class="card-body text-center mt-3">
-<h5 class="card-title">Psicóloga</h5>
-<p class="card-text">Nossa finalidade é ajudar os pacientes a lidar com questões emocionais, comportamentais 
-e de saúde mental. Utilizamos diversas abordagens terapêuticas, como terapia cognitivo-comportamental, terapia humanista
-e psicoterapia psicodinâmica, para promover o bem-estar e a qualidade de vida dos nossos pacientes.</p>
+
+<div class="col-md-4">
+<div class="card-container" onclick="flipCard(this)">
+<div class="card-inner">
+
+<div class="card-front">
+<h5 class="card-title fs-1">Psicóloga</h5>
+</div>
+
+<div class="card-back">
+<p class="card-text">Nossa finalidade é ajudar os pacientes a lidar com questões emocionais, comportamentais e de saúde mental. Utilizamos diversas abordagens terapêuticas, como terapia cognitivo-comportamental, terapia humanista e psicoterapia psicodinâmica, para promover o bem-estar e a qualidade de vida dos nossos pacientes.</p>
+</div>
+
+<div class="card-front">
+<h5 class="card-title fs-1">Terapias Autismo (ABA/Denver)</h5>
+</div>
+
+<div class="card-back">
+<p class="card-text">Oferecemos terapias especializadas para crianças com Transtorno do Espectro Autista (TEA), como ABA (Análise do Comportamento Aplicada) e Denver. Essas terapias visam melhorar as habilidades sociais, comunicativas e comportamentais das crianças, proporcionando um ambiente de aprendizado estruturado e individualizado.</p>
+</div>
 </div>
 </div>
 </div>
 
-<div class="col-md-4 mt-5">
-<div class="card h-100 border-primary mb-3">
-<div class="card-body text-center">
-<h5 class="card-title">Terapias Autismo (ABA/Denver)</h5>
-<p class="card-text">Oferecemos terapias especializadas para crianças com Transtorno do Espectro Autista (TEA), como ABA 
-(Análise do Comportamento Aplicada) e Denver. Essas terapias visam melhorar as habilidades sociais, comunicativas e 
-comportamentais das crianças, proporcionando um ambiente de aprendizado estruturado e individualizado.</p>
+<div class="col-md-4">
+<div class="card-container" onclick="flipCard(this)">
+<div class="card-inner">
+
+<div class="card-front">
+<h5 class="card-title fs-1">Psicopedagogia</h5>
+</div>
+
+<div class="card-back">
+<p class="card-text">Focados em trabalhar com crianças e adolescentes que apresentam dificuldades de aprendizagem. Realizamos avaliações detalhadas para identificar as áreas de dificuldade e desenvolvemos intervenções personalizadas para ajudar os alunos a superar esses desafios e alcançar seu pleno potencial acadêmico.</p>
+</div>
+
+<div class="card-front">
+<h5 class="card-title fs-1">Fonoaudiologia</h5>
+</div>
+
+<div class="card-back">
+<p class="card-text">Somos especializados no tratamento de distúrbios da comunicação, como problemas de fala, linguagem, audição e deglutição. Trabalhamos com pacientes de todas as idades para melhorar suas habilidades comunicativas e garantir uma melhor qualidade de vida.</p>
+</div>
 </div>
 </div>
 </div>
 
-<div class="col-md-4 mt-5">
-<div class="card h-100 border-primary mb-3">
-<div class="card-body text-center">
-<h5 class="card-title">Psicopedagogia</h5>
-<p class="card-text">Focados em trabalhar com crianças e adolescentes que apresentam dificuldades de aprendizagem. 
-Realizamos avaliações detalhadas para identificar as áreas de dificuldade e desenvolvemos intervenções personalizadas para 
-ajudar os alunos a superar esses desafios e alcançar seu pleno potencial acadêmico.</p>
+<div class="col-md-4 ">
+<div class="card-container" onclick="flipCard(this)">
+<div class="card-inner">
+
+<div class="card-front">
+<h5 class="card-title fs-1">Terapia Ocupacional</h5>
+</div>
+
+<div class="card-back">
+<p class="card-text">Trabalhamos com indivíduos de todas as idades, oferecendo intervenções personalizadas que visam melhorar a independência e a qualidade de vida dos pacientes. Utilizamos abordagens baseadas em evidências para tratar uma variedade de condições físicas, emocionais e cognitivas.</p>
+</div>
 </div>
 </div>
 </div>
 
-<div class="col-md-4 mt-5">
-<div class="card h-100 border-primary mb-3">
-<div class="card-body text-center">
-<h5 class="card-title">Fonoaudiologia</h5>
-<p class="card-text">Nossos fonoaudiólogos são especializados no tratamento de distúrbios da comunicação, como problemas de fala, 
-linguagem, audição e deglutição. Trabalhamos com pacientes de todas as idades para melhorar suas habilidades comunicativas e 
-garantir uma melhor qualidade de vida.</p>
+<div class="col-md-4 ">
+<div class="card-container" onclick="flipCard(this)">
+<div class="card-inner">
+
+<div class="card-front">
+<h5 class="card-title fs-1">Neuropsicologia</h5>
+</div>
+
+<div class="card-back">
+<p class="card-text">Avaliamos e tratamos problemas cognitivos, emocionais e comportamentais decorrentesde lesões ou disfunções cerebrais. Utilizamos testes neuropsicológicos
+para identificar dificuldades específicas e desenvolver planos de intervenção personalizados para melhorar a qualidade de vida dos pacientes.</p>
+</div>
+
+<div class="card-front">
+<h5 class="card-title fs-1">Neuropsicologia</h5>
+</div>
+
+<div class="card-back">
+<p class="card-text">Avaliamos e tratamos problemas cognitivos, emocionais e comportamentais decorrentesde lesões ou disfunções cerebrais. Utilizamos testes neuropsicológicos
+para identificar dificuldades específicas e desenvolver planos de intervenção personalizados para melhorar a qualidade de vida dos pacientes.</p>
+</div>
 </div>
 </div>
 </div>
 
-<div class="col-md-4 mt-5">
-<div class="card h-100 border-primary mb-3">
-<div class="card-body text-center">
-<h5 class="card-title">Terapia Ocupacional</h5>
-<p class="card-text">Nossa Terapia Ocupacional (TO) é focada em ajudar pacientes 
-a desenvolver, recuperar ou manter habilidades necessárias para a vida diária 
-e o trabalho. Nossos terapeutas ocupacionais trabalham com indivíduos de todas
-as idades, oferecendo intervenções personalizadas que visam melhorar a independência 
-e a qualidade de vida dos pacientes. Utilizamos abordagens baseadas em evidências 
-para tratar uma variedade de condições físicas, emocionais e cognitivas.</p>
+<div class="col-md-4 ">
+<div class="card-container" onclick="flipCard(this)">
+<div class="card-inner">
+
+<div class="card-front">
+<h5 class="card-title fs-1">Neuropsicologia</h5>
+</div>
+
+<div class="card-back">
+<p class="card-text">Avaliamos e tratamos problemas cognitivos, emocionais e comportamentais decorrentesde lesões ou disfunções cerebrais. Utilizamos testes neuropsicológicos
+para identificar dificuldades específicas e desenvolver planos de intervenção personalizados para melhorar a qualidade de vida dos pacientes.</p>
+</div>
+
+<div class="card-front">
+<h5 class="card-title fs-1">Neuropsicologia</h5>
+</div>
+
+<div class="card-back">
+<p class="card-text">Avaliamos e tratamos problemas cognitivos, emocionais e comportamentais decorrentesde lesões ou disfunções cerebrais. Utilizamos testes neuropsicológicos
+para identificar dificuldades específicas e desenvolver planos de intervenção personalizados para melhorar a qualidade de vida dos pacientes.</p>
+</div>
 </div>
 </div>
 </div>
@@ -501,7 +649,7 @@ para tratar uma variedade de condições físicas, emocionais e cognitivas.</p>
 </section>
 
 <section id="fotos" class="py-5">
-<h3 class="text-center pt-5 py-5"><strong>Fotos</strong></h3>
+<h3 class="text-center pt-5 py-5 fs-1">Fotos</h3>
 <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
 
 <div class="carousel-indicators">
@@ -598,7 +746,7 @@ para tratar uma variedade de condições físicas, emocionais e cognitivas.</p>
 <section id="equipe">
 
 <div class="container">
-<h3 class="text-center pt-5 py-5"><strong>Nossa Equipe</strong></h3>
+<h3 class="text-center pt-5 py-5 fs-1">Nossa Equipe</h3>
 <div class="row justify-content-center">
 
 <div class="col-md-4 col-sm-6 text-center mb-4">
@@ -613,7 +761,7 @@ para tratar uma variedade de condições físicas, emocionais e cognitivas.</p>
 
 <div class="col-md-4 col-sm-6 text-center mb-4">
 <div class="team-card p-4 shadow-sm">
-<img src="src/imagem/ana.webp" class="rounded-circle mb-3" alt="Ana Cláudia Vatrim de Oliveira" width="150" height="150">
+<img src="src/imagem/Ana.jpeg" class="rounded-circle mb-3" alt="Ana Cláudia" width="150" height="150">
 <h5 class="text-primary">Ana Cláudia Vatrim</h5>
 <h6 class="text-muted">CBO 2394-25</h6>
 <p class="text-muted">Pedagoga e Psicopedagoga</p>
@@ -627,7 +775,7 @@ para tratar uma variedade de condições físicas, emocionais e cognitivas.</p>
 </section>
 
 <section id="atendimento" class="text-center py-2 mt-5 mx-5 py-5">
-<h3 class="fs-1 pt-5"><strong>Horário de Atendimento</strong></h3>
+<h3 class="fs-1 pt-5">Horário de Atendimento</h3>
 
 <div class="container my-5 table-container">
 <table class="table table-bordered">
@@ -667,15 +815,15 @@ para tratar uma variedade de condições físicas, emocionais e cognitivas.</p>
 </div>
 
 </section>
+
 <section class="text-dark">
 <div class="container" id="contato">
 <div class="row justify-content-center">
-<h4 class="text-center pt-5 py-5 fs-2 ">Informações de Contato</h4>
+<h3 class="text-center pt-5 py-5 fs-1"> ENTRE EM CONTATO</h3>
 <div class="col-md-6 mb-4">
 <p><i class="bi bi-geo-alt text-primary"></i> Localização: <a href="https://www.google.com/maps?q=Rua+São+Cristovão,+296+-+zona+8+-+Maringá" target="_blank">Rua São Cristovão, 296 - zona 8 - Maringá</a></p>
 <p><i class="bi bi-whatsapp text-primary"></i> Whatsapp: <a href="https://api.whatsapp.com/send?phone=99884-1961" target="_blank"> (44) 99884-1961</a></p>
 <p><i class="bi bi-telephone text-primary"></i> Telefone: <a href="tel:+55443246-2387" class="text-primary"> (44) 3246-2387</a></p>
-<p><i class="bi bi-envelope text-primary"></i> E-mail: <a href="mailto:contato@clinicaintegradacuidar.com">contato@clinicaintegradacuidar.com</a></p>
 <p><i class="bi bi-instagram text-primary"></i> Instagram: <a href="https://www.instagram.com/clinicaintegradacuidar" target="_blank">clinicaintegradacuidar</a></p>
 </div>
 
@@ -686,8 +834,8 @@ para tratar uma variedade de condições físicas, emocionais e cognitivas.</p>
 </div>
 
 <div class="col-md-6 mb-4">
-<h4 class="text-center fs-2">Envie Sua Mensagem</h4>
-<form action="sendmail.php" method="post">
+<h3 class="text-center fs-1">ENVIE SUA MENSAGEM</h3>
+<form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
 <div class="mb-3">
 <label for="nome" class="form-label">Nome</label>
 <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" required>
@@ -703,6 +851,7 @@ para tratar uma variedade de condições físicas, emocionais e cognitivas.</p>
 <button type="submit" class="btn btn-primary w-100">Enviar</button>
 </form>
 </div>
+
 </div>
 </div>
 </section>
@@ -710,6 +859,22 @@ para tratar uma variedade de condições físicas, emocionais e cognitivas.</p>
 <footer class="text-center fs-5 py-3 bg-dark text-white mt-5">
 <small>© 2024 Clínica. Desenvolvido por <a href="https://api.whatsapp.com/send?phone=44998984507" target="_blank" class="text-white font-weight-bold">Ana Vatrim</a>.</small>
 </footer>
+
+<script>
+function sendToWhatsApp(event) {
+event.preventDefault(); 
+
+const nome = document.getElementById('nome').value;
+const email = document.getElementById('email').value;
+const mensagem = document.getElementById('mensagem').value;
+
+const phoneNumber = "(44)998984507"; 
+const text = `Olá! Meu nome é ${nome}.\nE-mail: ${email}\nMensagem: ${mensagem}`;
+const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+
+window.open(url, '_blank'); 
+}
+</script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
