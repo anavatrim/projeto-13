@@ -12,6 +12,13 @@
 </head>
 <style>
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .body {
 font-family:Georgia, 'Times New Roman', Times, serif;
 margin: 0;
@@ -25,6 +32,11 @@ background-repeat: no-repeat;
 background-attachment: fixed; 
 padding: 50px 0; 
 color: white; 
+}
+.full-page-image {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
 }
 .full-screen {
 width: 100%; 
@@ -322,12 +334,6 @@ height: 150px;
 font-size: 1rem;
 }
 }
-@media (max-width: 252px){
-#home img{
-width: 420px;
-height: 150px;
-}
-}
 </style>
 
 <body class="body">
@@ -367,9 +373,10 @@ height: 150px;
 </div>
 </nav>
 
-<inicio class="conteiner-fluid" id="home">
-  <img src="./src/imagem/cl-06.jpeg" alt="Frente da Clínica" class="100" style="height: 100vh; object-fit: cover;">
-</inicio>
+<div class="container-fluid" id="home" style="margin: 0; padding: 0;">
+  <img src="./src/imagem/cl-06.jpeg" alt="Frente da Clínica" class="full-page-image">
+</div>
+
 
 <section class="container-fluid" id="servicos">
 <h3 class="text-center pt-5 py-5 fs-1">Nossos Serviços</h3>
