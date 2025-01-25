@@ -26,13 +26,12 @@ background-attachment: fixed;
 padding: 50px 0; 
 color: white; 
 }
-#home {
-margin: 0;
-padding: 0;
-width: 100vw; 
-height: 100vh; 
-overflow: hidden; 
-}
+
+#home img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+  }
 .full-screen {
 width: 100%; 
 height: 100%; 
@@ -314,6 +313,10 @@ padding: 100px;
 }
 @media (max-width: 768px) {
 
+#home img {
+height: 500px;
+}
+
 .circle {
 width: 100px;
 height: 100px;
@@ -331,6 +334,19 @@ font-size: 0.8rem;
 width: 150px;
 height: 150px;
 font-size: 1rem;
+}
+}
+
+
+@media (max-width: 992px){
+#home img {
+height: 700px;
+}
+}
+
+@media (max-width: 576px) { 
+#home img {
+height: 300px;
 }
 }
 </style>
@@ -382,7 +398,7 @@ font-size: 1rem;
 <h3 class="text-center pt-5 py-5 fs-1">Nossos Serviços</h3>
 <div class="row justify-content-center g-4">
 
-<div class="col-md-6 col-lg-4 mb-4">
+<div class="col-md-6 col-lg-4 mb-4 pt-1">
   <div class="card-container" onclick="flipCard(this)">
     <div class="card-inner mb-5">
 
@@ -408,8 +424,7 @@ font-size: 1rem;
   </div>
 </div>
 
-
-<div class="col-md-6 col-lg-4 mb-4">
+<div class="col-md-6 col-lg-4 mb-4 pt-1">
   <div class="card-container" onclick="flipCard(this)">
     <div class="card-inner mb-5">
       
@@ -436,7 +451,7 @@ font-size: 1rem;
 
 <div class="col-md-6 col-lg-4 mb-4 pt-1">
   <div class="card-container" onclick="flipCard(this)">
-    <div class="card-inner">
+    <div class="card-inner mb-5">
       
       <div class="card-front">
         <div class="card" style="width: 100%;">
@@ -456,7 +471,7 @@ font-size: 1rem;
     </div>
   </div>
 </div>
-
+    
 <div class="col-md-6 col-lg-4 mb-4 pt-1">
   <div class="card-container" onclick="flipCard(this)">
     <div class="card-inner mb-5">
@@ -525,15 +540,8 @@ font-size: 1rem;
     </div>
   </div>
 </div>
-
-
 </div>
 </section>
-
-
-
-
-
 
 <section id="fotos" class="py-5">
 <h3 class="text-center pt-5 py-5 fs-1">Fotos</h3>
@@ -602,15 +610,15 @@ font-size: 1rem;
 </div>
 
 <div class="circle item1">
-<i class="bi bi-briefcase fs-1 text-primary fs-3"></i>
+<i class="bi bi-briefcase fs-1 text-black fs-3"></i>
 <h6>Profissionalismo </h6>
 </div>
 <div class="circle item2">
-<i class="bi bi-scales fs-1 text-primary"></i>
+<i class="bi bi-scales fs-1 text-black"></i>
 <h6>Ética </h6>
 </div>
 <div class="circle item3">
-<i class="bi bi-hand-thumbs-up fs-1 text-success fs-3"></i>
+<i class="bi bi-hand-thumbs-up fs-1 text-black fs-3"></i>
 <h6>Respeito </h6>
 </div>
 <div class="circle item4">
@@ -618,11 +626,11 @@ font-size: 1rem;
 <h6>Amor</h6>
 </div>
 <div class="circle item5">
-<i class="bi bi-check-circle fs-1 text-info fs-3"></i>
+<i class="bi bi-check-circle fs-1 text-black fs-3"></i>
 <h6>Responsabilidade</h6>
 </div>
 <div class="circle item6">
-<i class="bi bi-person fs-1 text-secondary fs-3"></i>
+<i class="bi bi-person fs-1 text-black fs-3"></i>
 <h6>Valorização a singularidade do indivíduo</h6>
 </div>
 </div>
