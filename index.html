@@ -26,12 +26,6 @@ background-attachment: fixed;
 padding: 50px 0; 
 color: white; 
 }
-
-#home img {
-    width: 100%;
-    height: 900px;
-    object-fit: cover;
-  }
 .full-screen {
 width: 100%; 
 height: 100%; 
@@ -312,47 +306,31 @@ font-size: 1.8rem;
 padding: 100px;
 }
 @media (max-width: 768px) {
-
-#home img {
-height: 500px;
-}
-
 .circle {
 width: 100px;
 height: 100px;
 }
-
 .circle i {
 font-size: 1.5rem;
 }
-
 .circle h6 {
 font-size: 0.8rem;
 }
-
 .center-circle {
 width: 150px;
 height: 150px;
 font-size: 1rem;
 }
 }
-
-
-@media (max-width: 992px){
-#home img {
-height: 700px;
-}
-}
-
-@media (max-width: 576px) { 
-#home img {
-height: 300px;
+@media (max-width: 252px){
+#home img{
+width: 420px;
+height: 150px;
 }
 }
 </style>
 
 <body class="body">
-
 <nav class="navbar navbar-expand-lg bg-primary fixed-top">
 <div class="container-fluid">
 <a class="navbar-brand text-white">Clínica</a>
@@ -390,8 +368,7 @@ height: 300px;
 </nav>
 
 <inicio class="conteiner-fluid" id="home">
-<img src="./src/imagem/cl-06.jpeg" alt="Frente da Clínica" class="w-100" style="height: 900px; object-fit: cover;">
-
+  <img src="./src/imagem/cl-06.jpeg" alt="Frente da Clínica" class="100" style="height: 100vh; object-fit: cover;">
 </inicio>
 
 <section class="container-fluid" id="servicos">
