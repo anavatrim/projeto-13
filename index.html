@@ -67,7 +67,6 @@ transform: rotateY(180deg);
   align-items: center; 
   height: 100vh; 
   width: 100%; 
-  background-color: #f0f0f0; 
 }
 
 .card-front, .card-back {
@@ -168,15 +167,40 @@ margin-bottom: 1rem;
 text-transform: uppercase;
 text-align: center;
 }
-#equipe .team-card {
-background: linear-gradient(to bottom, #90cbd8, #ffffff);
-border-radius: 15px;
-padding: 1.5rem;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
+#atendimento h3{
+margin-top: 90px;
+
 }
+#equipe .team-card {
+  background: linear-gradient(to bottom, #90cbd8, #ffffff);
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
+  width: 90%; 
+  max-width: 400px; 
+  height: auto; 
+  transform: scale(0.9); 
+ 
+}
+
+@media (max-width: 768px) {
+  #equipe .team-card {
+    width: 80%; 
+    transform: scale(0.8); 
+  }
+}
+
+@media (max-width: 480px) {
+  #equipe .team-card {
+    width: 100%; 
+    transform: scale(0.7); 
+  }
+}
+
 #equipe img:hover {
 border-color: #0056b3;
+
 }
 #equipe h5 {
 font-size: 2rem;
@@ -270,6 +294,11 @@ border-collapse: collapse;
 border-radius: 8px;
 overflow: hidden;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+background-repeat: no-repeat;
+width:100;
+height: auto;
+background-color:  #3691f2;
+
 }
 footer {
 position: fixed;
@@ -656,9 +685,9 @@ font-size: 1rem;
 <div class="col-md-4 col-sm-6 text-center mb-4">
 <div class="team-card p-4 shadow-sm">
 <img src="src/imagem/Ana.jpeg" class="rounded-circle mb-3" alt="Ana Cláudia" width="150" height="150">
-<h5 class="text-primary">Ana Cláudia</h5>
+<h5 class="text-primary">Ana Cláudia Vatrim</h5>
 <h6 class="text-muted">CBO 2394-25</h6>
-<p class="text-muted">Pedagoga e Psicopedagoga</p>
+<p class="text-muted">Pedagoga/Psicopedagoga</p>
 <p class="text-muted">Especialista em Autismo e Psicopedagogia</p>
 </div>
 </div>
@@ -668,7 +697,7 @@ font-size: 1rem;
 
 </section>
 
-<section id="atendimento" class="text-center py-2 mt-5 mx-5 py-5">
+<section id="atendimento" class="text-center">
 <h3 class="fs-1 pt-5">Horário de Atendimento</h3>
 
 <div class="container my-5 table-container">
