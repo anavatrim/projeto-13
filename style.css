@@ -155,7 +155,7 @@ section h3::after {
     border-radius: 5px;
 }
 
-/* CARDS (for services, etc.) */
+
 .card-container {
     perspective: 1000px;
 }
@@ -362,4 +362,28 @@ footer .social-icons a:hover {
     .carousel-item img {
         height: 300px; /* Further adjust height for mobile screens */
     }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.servicos-page #servicos {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.servicos-page h3 {
+    margin-bottom: 20px;
+}
+
+.servicos-page .list-group-item {
+    padding: 1px 1px;
+    font-size: 0.9rem;
 }
