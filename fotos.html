@@ -4,15 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Clínica Cuidar - Psicologia, Neuropsicologia e Terapia para Autismo em Maringá</title>
-  <meta name="description" content="A Clínica Cuidar oferece serviços especializados em psicologia, neuropsicologia, fonoaudiologia, terapia ocupacional, psicopedagogia e terapias para autismo em Maringá.">
-  
+  <title>Fotos - Clínica Cuidar</title>
+  <meta name="description" content="Fotos da Clínica Cuidar em Maringá.">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,12 +21,11 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
         <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-        <li class="nav-item"><a class="nav-link" href="fotos.html">Fotos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="fotos.html">Fotos</a></li>
         <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
         <li class="nav-item"><a class="nav-link" href="atendimento.html">Atendimento</a></li>
         <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
@@ -40,14 +37,44 @@
   </div>
 </nav>
 
-<div id="home" class="hero-section">
-  <div class="hero-overlay"></div>
-  <div class="container text-center hero-content">
-    <h1 class="display-4 fw-bold text-white">Clínica Cuidar</h1>
-    <p class="lead text-white">Psicologia, Neuropsicologia e Terapia para Autismo em Maringá</p>
-    <a href="servicos.html" class="btn btn-primary btn-lg">Nossos Serviços</a>
+<section id="fotos" class="text-center">
+  <div class="container">
+    <h3>Nossa Estrutura</h3>
+    <div id="clinicCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./src/imagem/cl-01.jpeg" class="d-block w-100 img-fluid" alt="Foto da clínica 1">
+        </div>
+        <div class="carousel-item">
+          <img src="./src/imagem/cl-02.jpeg" class="d-block w-100 img-fluid" alt="Foto da clínica 2">
+        </div>
+        <div class="carousel-item">
+          <img src="./src/imagem/cl-03.jpeg" class="d-block w-100 img-fluid" alt="Foto da clínica 3">
+        </div>
+        <div class="carousel-item">
+          <img src="./src/imagem/cl-04.jpeg" class="d-block w-100 img-fluid" alt="Foto da clínica 4">
+        </div>
+        <div class="carousel-item">
+          <img src="./src/imagem/cl-05.jpeg" class="d-block w-100 img-fluid" alt="Foto da clínica 5">
+        </div>
+        <div class="carousel-item">
+          <img src="./src/imagem/cl-06.jpeg" class="d-block w-100 img-fluid" alt="Foto da clínica 6">
+        </div>
+        <div class="carousel-item">
+          <img src="./src/imagem/cl-07.jpeg" class="d-block w-100 img-fluid" alt="Foto da clínica 7">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#clinicCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#clinicCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </div>
-</div>
+</section>
 
 <footer class="text-center">
   <div class="container">
