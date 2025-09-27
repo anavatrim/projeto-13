@@ -74,13 +74,19 @@ body {
 /* HERO SECTION */
 .hero-section {
     position: relative;
-    height: 90vh;
+    height: 83.0vh;
     background: url('./src/imagem/cl-06.jpeg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--white);
+}
+
+@media (max-width: 700px) {
+    .hero-section {
+        height: 82.6vh; 
+    }
 }
 
 .hero-overlay {
@@ -95,7 +101,7 @@ body {
 .hero-content {
     position: relative;
     z-index: 1;
-    padding: 20px;
+
 }
 
 .hero-content h1 {
@@ -295,20 +301,19 @@ section h3::after {
     box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);
 }
 
-/* FOOTER */
+
 footer {
     background: var(--secondary-color);
     color: var(--white);
-    padding: 3px 0px;
-    font-size: 1rem; /* Adjusted for consistent sizing */
+    padding: 10px 0px;
+    font-size: 1rem; 
     text-align: center;
 }
 
-/* ... other CSS ... */
 
 footer .social-icons a {
     color: var(--white);
-    font-size: 1rem; /* Adjusted for consistent sizing */
+    font-size: 1rem; 
     margin: 0 10px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -318,12 +323,12 @@ footer .social-icons a:hover {
     transform: translateY(-3px);
 }
 
-/* Utility classes for spacing */
+
 .mt-6 { margin-top: 4rem !important; }
 .mb-6 { margin-bottom: 4rem !important; }
 .py-6 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
 
-/* Responsive adjustments */
+
 @media (max-width: 992px) {
     .hero-content h1 {
         font-size: 2.5rem;
