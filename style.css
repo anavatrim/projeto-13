@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #4A90E2; /* A more modern blue */
-    --secondary-color: #2C3E50; /* Darker, professional blue-gray */
-    --accent-color: #F39C12; /* A subtle, warm accent */
+    --primary-color: #4A90E2; 
+    --secondary-color: #2C3E50; 
+    --accent-color: #F39C12; 
     --light-gray: #F8F9FA;
     --dark-gray: #34495E;
     --white: #FFFFFF;
@@ -210,8 +210,8 @@ section h3::after {
 }
 
 .carousel-item img {
-    height: 500px; /* Fixed height for carousel images */
-    object-fit: contain; /* Changed to contain to prevent cropping */
+    height: 500px; 
+    object-fit: contain; 
     border-radius: 15px;
 }
 
@@ -271,7 +271,6 @@ section h3::after {
     box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
-/* LIST GROUP (for services) */
 .list-group-item {
     background-color: var(--white);
     border: 1px solid #e0e0e0;
@@ -288,7 +287,7 @@ section h3::after {
     transform: translateX(5px);
 }
 
-/* CONTACT FORM */
+
 .form-floating .form-control,
 .form-floating .form-select {
     border-radius: 8px;
