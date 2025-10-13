@@ -6,11 +6,10 @@
   <title>Fotos - Clínica Cuidar</title>
   <meta name="description" content="Fotos e vídeos da Clínica Cuidar em Maringá.">
 
-  <!-- Fontes e ícones -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="style.css">
   <style>
     html, body {
       height: 100%;
@@ -24,29 +23,14 @@
       scroll-behavior: smooth;
       display: flex;
       flex-direction: column;
-      overflow: hidden; /* Prevent body from scrolling */
-    }
-
-    nav.navbar {
-      background-color: #6fb1a0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      flex-shrink: 0; /* Prevent navbar from shrinking */
-    }
-
-    nav .nav-link {
-      color: white !important;
-      transition: color 0.3s ease;
-    }
-
-    nav .nav-link:hover {
-      color: #dff3ec !important;
+      overflow: hidden; 
     }
 
     main {
       margin-top: 100px;
-      flex-grow: 1; /* Allow main to fill available space */
-      overflow-y: auto; /* Allow content within main to scroll */
-      padding-bottom: 20px; /* Some space at the end of the scroll */
+      flex-grow: 1; 
+      overflow-y: auto; 
+      padding-bottom: 20px;
     }
 
     h3 {
@@ -55,16 +39,15 @@
       margin-bottom: 40px;
     }
 
-    /* Galeria */
     .gallery-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 10px;
     }
 
     .gallery-item {
       overflow: hidden;
-      border-radius: 16px;
+      border-radius: 14px;
       position: relative;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -73,52 +56,29 @@
     .gallery-item img,
     .gallery-item video {
       width: 100%;
-      height: 100%;
+      height: 500px;
       object-fit: cover;
-      border-radius: 16px;
+      border-radius: 10px;
       transition: transform 0.4s ease;
       cursor: pointer;
     }
 
     .gallery-item:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transform: scale(1.00);
+      box-shadow: 0 8px 10px rgba(0,0,0,0.15);
     }
 
     .gallery-item:hover img,
     .gallery-item:hover video {
       transform: scale(1.1);
     }
-
-    /* Espaçamento menor antes do footer */
-    section#fotos {
-      padding-bottom: 20px;
-    }
-
-    footer {
-      background-color: #6fb1a0;
-      color: white;
-      padding: 20px 0; /* menor altura */
-      flex-shrink: 0;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      transition: opacity 0.3s;
-    }
-
-    footer a:hover {
-      opacity: 0.8;
-    }
   </style>
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold text-white" href="index.html">Clínica Cuidar</a>
+    <a class="navbar-brand fw-bold" href="index.html">Clínica Cuidar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -126,12 +86,12 @@
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
         <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-        <li class="nav-item"><a class="nav-link active" href="fotos.html">Fotos</a></li>
-        <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+        <li class="nav-item"><a class="nav-link" href="fotos.html">Fotos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="equipe.html">Equipe</a></li>
         <li class="nav-item"><a class="nav-link" href="atendimento.html">Atendimento</a></li>
         <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
         <li class="ms-3">
-          <a href="https://api.whatsapp.com/send?phone=44998841961" target="_blank" class="bi bi-whatsapp fs-3 text-white"></a>
+          <a href="https://api.whatsapp.com/send?phone=44998841961" target="_blank" class="bi bi-whatsapp fs-3"></a>
         </li>
       </ul>
     </div>
@@ -154,7 +114,7 @@
     </div>
 
     <div class="gallery-item">
-      <video playsinline muted loop poster="./src/imagem/img 2.jpeg"
+      <video playsinline muted loop poster="./src/imagem/img3vd.png"
              onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
         <source src="./src/imagem/img 3.mp4" type="video/mp4">
         Seu navegador não suporta vídeo.
