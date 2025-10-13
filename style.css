@@ -1,7 +1,7 @@
 :root {
     --primary-color: #4A90E2; 
     --secondary-color: #2C3E50; 
-    --accent-color: #F39C12; 
+    --accent-color: #f8ef01; 
     --light-gray: #F8F9FA;
     --dark-gray: #34495E;
     --white: #FFFFFF;
@@ -22,7 +22,7 @@ body {
 
     
 .navbar {
- background-color: #6fb1a0;
+ background-color: #4A90E2;
     backdrop-filter: blur(8px);
     box-shadow: white;
     padding: 1rem 0;
@@ -39,11 +39,12 @@ nav .nav-link {
 .navbar-brand {
     font-weight: 700;
     font-size: 1.8rem;
+     color:#ffff;
 }
 
 .navbar-nav .nav-link {
     font-weight: 500;
-    color: var(--dark-gray) !important;
+    color: var(--white) !important;
     transition: color 0.3s ease, transform 0.3s ease;
     margin: 0 10px;
     position: relative;
@@ -56,7 +57,7 @@ nav .nav-link {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--primary-color);
+    background-color: var(--black-color);
     transition: width 0.3s ease;
 }
 
@@ -66,12 +67,12 @@ nav .nav-link {
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--primary-color) !important;
+    color: var(--accent-color) !important;
     transform: translateY(-2px);
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--primary-color) !important;
+    color: var(--accent-color) !important;
 }
 
 .navbar-toggler {
@@ -315,7 +316,7 @@ section h3::after {
 }
 
 footer {
-    background-color: #6fb1a0;
+    background-color: #4A90E2;
     color: var(--white);
     padding: 10px 0px;
     font-size: 1rem; 
