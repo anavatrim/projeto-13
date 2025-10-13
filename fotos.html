@@ -12,16 +12,25 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
 
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #fafafa;
       color: #333;
       scroll-behavior: smooth;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden; /* Prevent body from scrolling */
     }
 
     nav.navbar {
       background-color: #6fb1a0;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      flex-shrink: 0; /* Prevent navbar from shrinking */
     }
 
     nav .nav-link {
@@ -35,6 +44,9 @@
 
     main {
       margin-top: 100px;
+      flex-grow: 1; /* Allow main to fill available space */
+      overflow-y: auto; /* Allow content within main to scroll */
+      padding-bottom: 20px; /* Some space at the end of the scroll */
     }
 
     h3 {
@@ -87,7 +99,7 @@
       background-color: #6fb1a0;
       color: white;
       padding: 20px 0; /* menor altura */
-      margin-top: 30px; /* antes era 60px */
+      flex-shrink: 0;
     }
 
     footer a {
@@ -150,10 +162,10 @@
     </div>
 
     <div class="gallery-item">
-      <video playsinline muted loop poster="./src/imagem/img 4.jpeg"
+      <video playsinline muted loop poster="./src/imagem/img 4.mp4"
              onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
         <source src="./src/imagem/img4.mp4" type="video/mp4">
-        Seu navegador não suporta vídeo.
+        Seu navegador não suporta vídeo.s
       </video>
     </div>
 
@@ -164,11 +176,11 @@
 <!-- Rodapé -->
 <footer class="text-center">
   <div class="container">
-    <p class="mb-1">&copy; 2024 Clínica Cuidar - CNPJ: 28.801.985/0001-73</p>
+    <p class="mb-0">&copy; 2024 Clínica Cuidar - CNPJ: 28.801.985/0001-73</p>
     <p>Desenvolvido por <a href="https://github.com/anavatrim" target="_blank">Ana Vatrim</a></p>
     <div>
-      <a href="https://www.instagram.com/clinicaintegradacuidar/" class="me-3"><i class="bi bi-instagram fs-4"></i></a>
-      <a href="https://api.whatsapp.com/send?phone=44998841961" target="_blank"><i class="bi bi-whatsapp fs-4"></i></a>
+      <a href="https://www.instagram.com/clinicaintegradacuidar/" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=44998841961" target="_blank" class="text-white"><i class="bi bi-whatsapp fs-4"></i></a>
     </div>
   </div>
 </footer>

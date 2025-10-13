@@ -14,6 +14,9 @@ body {
     color: var(--text-color);
     overflow-x: hidden;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 
@@ -21,7 +24,7 @@ body {
 .navbar {
  background-color: #6fb1a0;
     backdrop-filter: blur(8px);
-    box-shadow: white
+    box-shadow: white;
     padding: 1rem 0;
 }
 nav .nav-link {
@@ -311,15 +314,18 @@ section h3::after {
     box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);
 }
 
-
 footer {
     background-color: #6fb1a0;
     color: var(--white);
     padding: 10px 0px;
     font-size: 1rem; 
     text-align: center;
+    position: fixed; /* fixa o footer */
+    bottom: 0; /* coloca ele na parte inferior */
+    left: 0;
+    width: 100%; /* ocupa toda a largura da tela */
+    z-index: 1000; /* garante que fique acima de outros elementos */
 }
-
 
 footer .social-icons a {
     color: var(--white);
@@ -332,6 +338,7 @@ footer .social-icons a:hover {
     color: var(--accent-color);
     transform: translateY(-3px);
 }
+
 
 
 .mt-6 { margin-top: 4rem !important; }
@@ -373,11 +380,7 @@ footer .social-icons a:hover {
     }
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+
 
 main {
     flex: 1;
