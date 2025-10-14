@@ -40,12 +40,21 @@
     }
 
     .gallery-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: flex;
+      overflow-x: auto;
       gap: 10px;
+      padding: 10px 0;
+      -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+      scrollbar-width: none; /* For Firefox */
+      -ms-overflow-style: none;  /* IE and Edge */
+    }
+
+    .gallery-container::-webkit-scrollbar {
+      display: none; /* For Chrome, Safari and Opera */
     }
 
     .gallery-item {
+      flex: 0 0 280px;
       overflow: hidden;
       border-radius: 14px;
       position: relative;
@@ -71,6 +80,41 @@
     .gallery-item:hover img,
     .gallery-item:hover video {
       transform: scale(1.1);
+    }
+
+    .position-relative {
+      position: relative;
+    }
+
+    .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(74, 124, 111, 0.8);
+      color: white;
+      border: none;
+      cursor: pointer;
+      z-index: 1;
+      padding: 10px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .scroll-btn:hover {
+      background-color: rgba(74, 124, 111, 1);
+    }
+
+    .scroll-btn.left {
+      left: 15px;
+    }
+
+    .scroll-btn.right {
+      right: 15px;
     }
   </style>
 </head>
@@ -98,42 +142,66 @@
   </div>
 </nav>
 
-<!-- Conteúdo -->
+
 <main>
 <section id="fotos" class="text-center container">
   <h3>Nossa Estrutura</h3>
 
-  <div class="gallery-container">
+  <div class="position-relative" style="overflow: hidden;">
+    <div class="gallery-container" id="galleryContainer">
 
-    <div class="gallery-item">
-      <img src="./src/imagem/img 1.jpeg" alt="Foto da clínica 1">
+      <div class="gallery-item">
+        <img src="./src/imagem/img 5.jpeg" alt="Foto da clínica 1">
+      </div>
+
+       <div class="gallery-item">
+        <img src="./src/imagem/img 2.jpeg" alt="Foto da clínica 2">
+      </div>
+
+
+      <div class="gallery-item">
+        <video playsinline muted loop poster="./src/imagem/img3vd.png"
+               onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+          <source src="./src/imagem/img 3.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+
+      <div class="gallery-item">
+        <video playsinline muted loop poster="./src/imagem/cl-04.jpeg"
+               onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+          <source src="./src/imagem/img 4.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+
+      <div class="gallery-item">
+        <img src="./src/imagem/img 1.jpeg" alt="Foto da clínica 5">
+      </div>
+
+       <div class="gallery-item">
+        <img src="./src/imagem/img 7.jpeg" alt="Foto da clínica 6">
+      </div>
+
+      <div class="gallery-item">
+        <img src="./src/imagem/img 6.jpeg" alt="Foto da clínica 7">
+      </div>
+
+         <div class="gallery-item">
+        <img src="./src/imagem/cl-02.jpeg" alt="Foto da clínica 8">
+      </div>
+
+          <div class="gallery-item">
+        <img src="./src/imagem/cl-04.jpeg" alt="Foto da clínica ">
+      </div>
+
     </div>
-
-    <div class="gallery-item">
-      <img src="./src/imagem/img 2.jpeg" alt="Foto da clínica 2">
-    </div>
-
-    <div class="gallery-item">
-      <video playsinline muted loop poster="./src/imagem/img3vd.png"
-             onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-        <source src="./src/imagem/img 3.mp4" type="video/mp4">
-        Seu navegador não suporta vídeo.
-      </video>
-    </div>
-
-    <div class="gallery-item">
-      <video playsinline muted loop poster="./src/imagem/img 4.mp4"
-             onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-        <source src="./src/imagem/img4.mp4" type="video/mp4">
-        Seu navegador não suporta vídeo.s
-      </video>
-    </div>
-
+    <button class="scroll-btn left" onclick="scrollGallery(-300)">&#10094;</button>
+    <button class="scroll-btn right" onclick="scrollGallery(300)">&#10095;</button>
   </div>
 </section>
 </main>
 
-<!-- Rodapé -->
 <footer class="text-center">
   <div class="container">
     <p class="mb-0">&copy; 2024 Clínica Cuidar - CNPJ: 28.801.985/0001-73</p>
@@ -145,8 +213,17 @@
   </div>
 </footer>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  function scrollGallery(scrollOffset) {
+    const gallery = document.getElementById('galleryContainer');
+    gallery.scrollBy({
+      left: scrollOffset,
+      behavior: 'smooth'
+    });
+  }
+</script>
 
 </body>
 </html>
