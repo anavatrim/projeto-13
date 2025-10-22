@@ -321,11 +321,8 @@ footer {
     padding: 10px 0px;
     font-size: 1rem; 
     text-align: center;
-    position: fixed; /* fixa o footer */
-    bottom: 0; /* coloca ele na parte inferior */
-    left: 0;
-    width: 100%; /* ocupa toda a largura da tela */
-    z-index: 1000; /* garante que fique acima de outros elementos */
+    width: 100%;
+    z-index: 1000;
 }
 
 footer .social-icons a {
@@ -482,4 +479,44 @@ main {
     position: absolute;
     left: 0;
     font-weight: bold;
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    section {
+        padding: 40px 15px;
+    }
+    section h3 {
+        font-size: 1.6rem;
+    }
+    .servicos-page .list-group-item {
+        font-size: 0.85rem;
+        padding: 10px 15px;
+    }
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    footer {
+        padding: 20px 0;
+        position: relative;
+    }
+
+    .navbar-nav {
+        align-items: flex-start !important;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 0.5rem;
+    }
+
+    .navbar-nav .ms-3 {
+        margin-left: 0 !important;
+        margin-top: 0.5rem;
+    }
 }
